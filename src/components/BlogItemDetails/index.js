@@ -26,6 +26,7 @@ class BlogItemDetails extends Component {
       avatarUrl: data.avatar_url,
       author: data.author,
       topic: data.topic,
+      content: data.content,
     }
     this.setState({blogData: newData, isBlogItemDetailsLoading: false})
   }
@@ -34,7 +35,9 @@ class BlogItemDetails extends Component {
     const {isBlogItemDetailsLoading, blogData} = this.state
     const {title, imageUrl, content, avatarUrl, author} = blogData
     return isBlogItemDetailsLoading ? (
-      <Loader type="TailSpin" color="#00BFFF" height={50} width={50} />
+      <div data-testid="loader">
+        <Loader type="TailSpin" color="#00BFFF" height={50} width={50} />{' '}
+      </div>
     ) : (
       <div className="blog-info">
         <h2 className="blog-details-title">{title}</h2>

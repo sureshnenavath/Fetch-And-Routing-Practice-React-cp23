@@ -11,7 +11,7 @@ const BlogItem = props => {
         <div className="item-info">
           <p className="item-topic">{topic}</p>
 
-          <p className="item-title">{title}</p>
+          <h1 className="item-title">{title}</h1>
           <div className="author-info">
             <img className="avatar" src={avatarUrl} alt={`avatar${id}`} />
             <p className="author-name">{author}</p>
