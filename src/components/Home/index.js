@@ -3,7 +3,7 @@ import BlogList from '../BlogList'
 import UserInfo from '../UserInfo'
 
 const Home = () => (
-  <div className="home-container" data-testid="loader">
+  <div className="home-container">
     <UserInfo />
     <BlogList />
   </div>
